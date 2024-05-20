@@ -56,7 +56,7 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Your Name</a></h1>
+            <h1 class="mb-0 site-logo"><a href="#" class="h2 mb-0">Cory Tamburrino</a></h1>
           </div>
 
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -86,19 +86,23 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
 
-            <img src="" alt="Image of you of something fun" class="img-fluid">
+            <img src="images/IMG_4681.jpg" alt="Image of you of something fun" class="img-fluid">
 
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
               <p>
-               Who you are
+               Computer science student at University of San Diego.   
               </p>
               <p>
-                Professional info
+                Veteran of the US Navy Nuclear Power Program.  4 years experience as a Field Service Engineer in the Bio-tech industry.
+                Currently studying Computer Science with a specialized interest in Machine Learning, and Artificial Intelligence.
                </p>
                <p>
-                Hobbies
+                I am a huge sports fan, and hope to combine my passion for data and AI with my passion for sports.
+               </p>
+               <p>
+                Outside of my professional life I like to spend time with my 2 dogs, go on hikes, and travel to beautiful locations all around the west coast.
                </p>
 
 
@@ -123,23 +127,55 @@
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="" alt="Image of your project" class="img-fluid">
+            <img src="images\baseball305.png" alt="Image of your project" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div class="mb-4">
-              <h3>Project Title</h3>
+              <h3>Baseball305</h3>
               <p>
-               Motivation of the project
+               As sports fans, we thought it would be fun to design a Baseball simulator game.  
+               As computer science students the idea of a baseball simulator game is almost endlessly expandable.
+               The spectrum of complexity is vast for this project, and continuosly improving the project is our goal.
               </p>
               <p>
-              Functional requirements/what the project does
+              The Baseball Simulator game has all 30 MLB teams.  The user can choose 2 teams and begin the simulation.  
+              Using individual players' skill rating, and a realistic implementation of randomness, each at bat is simulated.
+              The game will print out status updates similar to a TV graphic you would see on a baseball game.
+              The game will also print out the final box score at the end of the game showing when the runs were scored throughout the game.
               </p>
               <p>
-              Project design
+              The project is designed such that there is a overall simulator, GameSimulator that controls the flow of exectuion of the simulation.
+              The SetupGame class handles all user input to select the teams, and loads the team information in from the resources file, and creates a game object.   
+              We decided to make a non-static Game Class, for future expansion, in order to simulate more than one Game.
+              Each Team consists of a starting pitcher, and a batting lineup.  Each team has 1 Pitcher and 9 Batters, and they each have skill ratings associated, found from MLB The Show 2024.
+              For each at-bat, the program calculates the skill difference rating of the pitcher and batter and determines a hit probability.  A random number is generated, and using the hit probability, is either a hit or an out.  If it is a hit, then it is determined what type of hit it is (40% Single, 30% Double, 20% Home Run, 10% Triple).
+              The user is prompted to either simulate the next at bat only, the rest of the inning, or the entire game.  The result of each atbat is printed to the screen along with the current game status at each new at bat.  When the game is over a box score is printed indicating the runs scored by each team, per inning.
               </p>
               <p>
-              Implementation
+              Implementation:
+              This project provided a great use case for test driven development, and specifically the designing of the project before coding.  My partner and I spent a significant amount of time planning out the design of the project before writing any code, which was a new process for me.
+              <br>
+              <br>The classes I was responsible for writing in this project were:
+              <br>GameSimulator
+              <br>SetupGame
+              <br>SetupGameOutput
+              <br>UserInput
+              <br>PlayGame
+              <br>Team
+              <br>AT_BAT_RESULT
+              <br>GameStats
+              <br>Scoreboard
+              <br>All 30 Team resource files
+              <br>
+              <br>Due to test driven development I also wrote the following test files:
+              <br>GameStatsTest
+              <br>PlayGameTest
+              <br>SetupGameTest
+              <br>TeamTest
+              <br>UserInputTest
+              <br>
+              <br>My main focus on the project the game setup and creation.  I wrote the user input functionality and made sure a game object was created appropriately to be used to actually simulate the game, which Max focused on.
               </p>
 
 
@@ -178,7 +214,7 @@
           <div class="col-md-12 text-center">
             <p class="mb-0">
               <span class="icon-graduation-cap d-block h4 text-primary"></span>
-              <a href="">Resume</a>
+              <a href="files\resume_tamburrino.pdf">Resume</a>
             </p>
           </div>
         </div>
